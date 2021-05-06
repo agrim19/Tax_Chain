@@ -5,28 +5,20 @@ import "./Work.sol";
 
 contract Contractor{
 
-    address public owner;
+    mapping(address=>uint) taken;
 
-    // constructor(address _owner){
-    //     owner = _owner;
-    // }
-
-    // modifier onlyOwner() {
-    //     require(msg.sender == address(owner), "You are not the owner");
-    //     _;
-    // }
-
-    // event TransferredToAccount(uint amount, uint remainingBalance);
     event ContractFormed(address contractAddress);
+    event SentToAccount(address _to, uint amount);
 
     function createNewWork() public{
         Work w = new Work(this);
         emit ContractFormed(address(w));
     }
-    // function withdrawMoney(uint amount) public onlyOwner{
-    //     require(amount<=address(this).balance, "Insufficient funds in contract");
-    //     address payable ownerAddr = payable(msg.sender);
-    //     ownerAddr.transfer(amount);
-    //     emit TransferredToAccount(amount, address(this).balance);
-    // }
+
+    function sendToAccount(uint amount, address payable account) public {
+        require(amount<=address(this).balance);
+        account.transfer(amount);
+        taken[account]+=amount;
+        emit SentToAccount(account, amount);
+    }
 }
