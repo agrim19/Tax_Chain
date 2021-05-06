@@ -9,7 +9,6 @@ const expect = chai.expect;
 contract('Transact Test', async (accounts) => {
     it('should not allow non KYCed to buy tokens', async () => {
         let govt = await Govt.deployed();
-        govt.setGovtAddress(accounts[0]);
         let instance = await Transact.deployed();
         let transactAddress = Transact.address;
         //prettier-ignore
@@ -18,7 +17,6 @@ contract('Transact Test', async (accounts) => {
 
     it('KYCed should be able to buy tokens', async () => {
         let govt = await Govt.deployed();
-        govt.setGovtAddress(accounts[0]);
         let kyc = await KYC.deployed();
         kyc.completeKYC(accounts[1]);
         let instance = await Transact.deployed();

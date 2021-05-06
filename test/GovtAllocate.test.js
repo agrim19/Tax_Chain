@@ -8,7 +8,6 @@ const expect = chai.expect;
 contract('GovtAllocate', async (accounts) => {
     it('govt should be able to allocate and send money', async () => {
         let govt = await Govt.deployed();
-        await govt.setGovtAddress(accounts[0], { from: accounts[0] });
         await govt.setConstituencyAddress('delhi', accounts[1], {
             from: accounts[0],
         });
@@ -21,7 +20,6 @@ contract('GovtAllocate', async (accounts) => {
 
     it('should not allow non-govt accounts to allocate and send money', async () => {
         let govt = await Govt.deployed();
-        await govt.setGovtAddress(accounts[0], { from: accounts[0] });
         await govt.setConstituencyAddress('delhi', accounts[1], {
             from: accounts[0],
         });
