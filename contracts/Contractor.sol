@@ -15,10 +15,14 @@ contract Contractor{
         emit ContractFormed(address(w));
     }
 
+    receive() external payable{
+        emit SentToAccount(address(this), msg.value);
+    }
+
     function sendToAccount(uint amount, address payable account) public {
-        require(amount<=address(this).balance);
-        account.transfer(amount);
-        taken[account]+=amount;
+        require(amount<=address(this).balance, "Insufficient funds");
         emit SentToAccount(account, amount);
+        taken[account]+=amount;
+        account.transfer(amount);
     }
 }
