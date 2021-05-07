@@ -7,11 +7,11 @@ import Fund from "../../components/fund/fund.js";
 import GenerateContract from "../../components/generateContract/generateContract.js";
 import TransferFunds from "../../components/transferFund/transferFund.js";
 import Transactions from "../../components/transactions/transactions.js";
+import Kyc from "../../components/kyc/kyc.js";
 
 import "./constituency.css";
 
 function Constituency() {
-    
     return (
         <div>
             <NavigationBar></NavigationBar>
@@ -22,9 +22,10 @@ function Constituency() {
                     <Fund name="Used Funds" value="3202"></Fund>
                 </Row>
                 <Row>
-                    <Transactions></Transactions>
+                    <Transactions heading="Transactions in Your Constituency"></Transactions>
                     <GenerateContract></GenerateContract>
                     <TransferFunds></TransferFunds>
+                    <Kyc></Kyc>
                 </Row>
             </Container>
             <div className="constituency-above-footer"></div>

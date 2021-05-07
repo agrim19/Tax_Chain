@@ -8,7 +8,7 @@ function Transactions(props) {
         <Col md={12}>
             <Card className="constituency-card constituency-transaction-card">
                 <h4 className="constituency-transaction-heading ">
-                    Transactions
+                    {props.heading}
                 </h4>
                 <FindByYearMonthForm></FindByYearMonthForm>
                 <TransactionTable data={props.data}></TransactionTable>

@@ -29,7 +29,7 @@ export default function Citizen() {
                 <Row>
                     <Col sx={12} md={8} id="table">
                         <div className="payTax-table">
-                            <Transactions></Transactions>
+                            <Transactions heading="Transactions"></Transactions>
                         </div>
                     </Col>
 
