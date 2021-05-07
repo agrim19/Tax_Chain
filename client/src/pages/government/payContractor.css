@@ -1,0 +1,64 @@
+
+.PayContractor{
+    padding-top: 50px;
+}
+.currentFund{
+    background-color: palegreen;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1rem 0 1rem 0;
+}
+.form-container-pay-contractor{
+    width: 100%;
+    /* padding: 3rem; */
+    margin: auto;
+    color: white;
+    
+    border: 2px solid palegreen;
+    border-radius: 15px;
+}
+.form-container-pay-contractor h2{
+    color: white;
+}
+.form-container-pay-contractor input{
+    border: 1px solid palegreen;
+    border-radius: 5rem;
+    padding: 0.7rem;
+    width: 80%;
+    background-color: transparent;
+    color: white;
+    margin-top: 20px;
+}
+.form-container-pay-contractor input:focus{
+    outline:none!important;
+}
+.form-container-pay-contractor button{
+    width: 80%;
+    border: 2px solid palegreen;
+    background-color: transparent;
+    color: palegreen;
+    border-radius: 3rem;
+    padding: 10px;
+    margin: 1rem 0;
+}
+
+.form-container-pay-contractor button:hover{
+    background-color: palegreen;
+    color: white;
+}
+
+.currentFund h1{
+    font-size: 4rem;
+}
+.currentFund p{
+    color: white;
+}
+
+.PayContractor-table{
+
+    /* height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}

@@ -1,0 +1,19 @@
+.payTax-form{
+    /* padding: 1rem; */
+}
+.PayTax{
+    /* padding-top: 2rem;   */
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* display: flex; */
+}
+.payTax-table{
+    margin: auto;
+}
+#table-card{
+    order: 2;
+}
+.PayTax h1 {
+    margin-bottom: 2rem;
+}

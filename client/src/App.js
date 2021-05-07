@@ -1,35 +1,40 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Home from './pages/home/home.js';
+import SignUp from './pages/forms/signup';
+import Login from './pages/forms/login';
+import Citizen from './pages/citizen';
+import PayTax from './pages/citizen/PayTax';
+import Transactions from './pages/citizen/transactions';
+import GovtDashboard from './pages/government/government.js';
+import PayContractor from './pages/government/payContractor';
+import TaxDetails from './pages/government/taxDetails';
+import Constituency from './pages/constituency/consituency.js';
+import Contractor from './pages/contractor/contractor.js';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import getWeb3 from './getWeb3';
 
-import './App.css';
+import ContractorContract from './contracts/Contractor.json';
+import GovtAllocate from './contracts/GovtAllocate.json';
+import TransactContract from './contracts/Transact.json';
 
 class App extends Component {
-    state = { storageValue: 0, web3: null, accounts: null, contract: null };
+    state = { loaded: false };
 
     componentDidMount = async () => {
         try {
-            // Get network provider and web3 instance.
-            const web3 = await getWeb3();
-
-            // Use web3 to get the user's accounts.
-            const accounts = await web3.eth.getAccounts();
-
-            // Get the contract instance.
-            const networkId = await web3.eth.net.getId();
-            const deployedNetwork = SimpleStorageContract.networks[networkId];
-            const instance = new web3.eth.Contract(
-                SimpleStorageContract.abi,
-                deployedNetwork && deployedNetwork.address
+            this.web3 = await getWeb3();
+            this.accounts = await this.web3.eth.getAccounts();
+            this.networkId = await this.web3.eth.net.getId();
+            const transactInstance = new this.web3.eth.Contract(
+                TransactContract.abi,
+                TransactContract.networks[this.networkId] &&
+                    TransactContract.networks[this.networkId].address
             );
 
-            // Set web3, accounts, and contract to the state, and then proceed with an
-            // example of interacting with the contract's methods.
-            this.setState(
-                { web3, accounts, contract: instance },
-                this.runExample
-            );
+            this.setState({ loaded: true });
         } catch (error) {
-            // Catch any errors for any of the above operations.
             alert(
                 `Failed to load web3, accounts, or contract. Check console for details.`
             );
@@ -37,38 +42,49 @@ class App extends Component {
         }
     };
 
-    runExample = async () => {
-        const { accounts, contract } = this.state;
-
-        // Stores a given value, 5 by default.
-        await contract.methods.set(5).send({ from: accounts[0] });
-
-        // Get the value from the contract to prove it worked.
-        const response = await contract.methods.get().call();
-
-        // Update state with the result.
-        this.setState({ storageValue: response });
-    };
-
     render() {
-        if (!this.state.web3) {
+        if (!this.state.loaded) {
             return <div>Loading Web3, accounts, and contract...</div>;
         }
         return (
-            <div className='App'>
-                <h1>Good to Go!</h1>
-                <p>Your Truffle Box is installed and ready.</p>
-                <h2>Smart Contract Example</h2>
-                <p>
-                    If your contracts compiled and migrated successfully, below
-                    will show a stored value of 5 (by default).
-                </p>
-                <p>
-                    Try changing the value stored on <strong>line 40</strong> of
-                    App.js.
-                </p>
-                <div>The stored value is: {this.state.storageValue}</div>
-            </div>
+            <Router>
+                <div className='App'>
+                    <Switch>
+                        <Route path='/' exact component={Home}></Route>
+                        <Route path='/signup' component={SignUp}></Route>
+                        <Route path='/login' component={Login}></Route>
+                        <Route
+                            path='/citizen/PayTax'
+                            component={PayTax}
+                        ></Route>
+                        <Route
+                            path='/citizen/transactions'
+                            component={Transactions}
+                        ></Route>
+                        <Route path='/citizen' component={Citizen}></Route>
+                        <Route
+                            path='/government/payContractor'
+                            component={PayContractor}
+                        ></Route>
+                        <Route
+                            path='/government/taxDetails'
+                            component={TaxDetails}
+                        ></Route>
+                        <Route
+                            path='/government'
+                            component={GovtDashboard}
+                        ></Route>
+                        <Route
+                            path='/constituency'
+                            component={Constituency}
+                        ></Route>
+                        <Route
+                            path='/contractor'
+                            component={Contractor}
+                        ></Route>
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }
