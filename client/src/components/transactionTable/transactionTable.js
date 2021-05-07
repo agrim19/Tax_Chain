@@ -10,6 +10,7 @@ function TransactionTable(props) {
                 Transactions for January 2021
             </h5>
             <Table
+                responsive
                 striped
                 bordered
                 hover
