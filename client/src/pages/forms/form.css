@@ -1,5 +1,9 @@
 .auth-black-bg {
     background-image: url("../../pattern-large-dots.svg");
+    background-position: center;
+    background-color: black;
+    height: 56rem;
+    padding-top: 5rem;
 }
 
 .form-container {

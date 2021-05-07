@@ -1,9 +1,11 @@
 import React from "react";
+import NavigationBar from "../../components/navbar/navbar.js";
 import "./form.css";
 
 function SignUp() {
     return (
         <div className="auth-black-bg">
+            <NavigationBar></NavigationBar>
             <div className="form-container">
                 <h1>Sign Up</h1>
 
