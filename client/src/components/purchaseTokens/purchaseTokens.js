@@ -9,13 +9,15 @@ export default function PurchaseTokens(web3) {
         event.preventDefault();
         web3.web3.eth.getAccounts().then(async (accounts) => {
             let account = accounts[0];
+            let networkId = await web3.web3.eth.net.getId();
+            let contractAddress = Transact.networks[networkId].address;
             web3.web3.eth
                 .sendTransaction({
                     from: account,
-                    to: Transact.address,
+                    to: contractAddress,
                     value: 1,
                 })
-                .then(console.log)
+                .then(alert)
                 .catch(alert);
         });
     };
