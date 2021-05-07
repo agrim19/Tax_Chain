@@ -34,7 +34,7 @@ export default function Citizen() {
                     </Col>
 
                     <Col sx={12} md={4}>
-                        <div className="payTax-form">
+                        <div>
                             <Card className="table-card">
                                 <Card.Body>
                                     <h2>Pay Tax</h2>

@@ -1,18 +1,10 @@
-.payTax-form{
-    /* padding: 1rem; */
-}
-.PayTax{
-    /* padding-top: 2rem;   */
+.PayTax {
     padding-bottom: 4rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    /* display: flex; */
 }
-.payTax-table{
+.payTax-table {
     margin: auto;
-}
-#table-card{
-    /* order: 2; */
 }
 .PayTax h1 {
     margin-bottom: 2rem;
