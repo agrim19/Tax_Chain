@@ -22,15 +22,7 @@ class App extends Component {
         try {
             this.web3 = await getWeb3();
             this.accounts = await this.web3.eth.getAccounts();
-            console.log(this.accounts);
-            console.log('?????');
             this.networkId = await this.web3.eth.net.getId();
-            const transactInstance = new this.web3.eth.Contract(
-                TransactContract.abi,
-                TransactContract.networks[this.networkId] &&
-                    TransactContract.networks[this.networkId].address
-            );
-
             this.setState({ loaded: true });
         } catch (error) {
             alert(
@@ -51,7 +43,10 @@ class App extends Component {
                         <Route path='/' exact component={Home}></Route>
                         <Route path='/signup' component={SignUp}></Route>
                         <Route path='/login' component={Login}></Route>
-                        <Route path='/citizen' component={Citizen}></Route>
+                        <Route
+                            path='/citizen'
+                            render={() => <Citizen web3={this.web3} />}
+                        ></Route>
                         <Route
                             path='/government/'
                             component={GovtDashboard}

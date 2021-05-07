@@ -1,22 +1,41 @@
-import React from "react";
-import { Col, Button, Form, Card } from "react-bootstrap";
+import React from 'react';
+import { Col, Button, Form, Card } from 'react-bootstrap';
+import Transact from '../../contracts/Transact.json';
 
-import "./purchaseTokens.css";
+import './purchaseTokens.css';
 
-export default function PurchaseTokens() {
+export default function PurchaseTokens(web3) {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        web3.web3.eth.getAccounts().then(async (accounts) => {
+            let account = accounts[0];
+            web3.web3.eth
+                .sendTransaction({
+                    from: account,
+                    to: Transact.address,
+                    value: 1,
+                })
+                .then(console.log)
+                .catch(alert);
+        });
+    };
     return (
         <Col md={6}>
-            <Card className="pt-card">
+            <Card className='pt-card'>
                 <Card.Body>
-                    <h4 className="pt-heading">Purchase Tokens</h4>
+                    <h4 className='pt-heading'>Purchase Tokens</h4>
                     <Form>
                         <Form.Group>
                             <Form.Control
-                                type="text"
-                                placeholder="Enter amount in INR"
+                                type='text'
+                                placeholder='Enter amount'
                             />
                         </Form.Group>
-                        <Button className="pt-find-btn" type="submit">
+                        <Button
+                            className='pt-find-btn'
+                            type='submit'
+                            onClick={handleSubmit}
+                        >
                             Submit
                         </Button>
                     </Form>
