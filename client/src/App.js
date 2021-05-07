@@ -10,9 +10,6 @@ import Constituency from './pages/constituency/consituency.js';
 import Contractor from './pages/contractor/contractor.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import getWeb3 from './getWeb3';
-
-import ContractorContract from './contracts/Contractor.json';
-import GovtAllocate from './contracts/GovtAllocate.json';
 import TransactContract from './contracts/Transact.json';
 
 class App extends Component {

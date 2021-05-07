@@ -14,16 +14,16 @@ function NavigationBar(props) {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto ml-auto">
-                    <Nav.Link className="nav-link" href="/government">
+                    <Nav.Link className="nav-link" href="/citizen">
                         Citizens
                     </Nav.Link>
-                    <Nav.Link className="nav-link" href="#features">
+                    <Nav.Link className="nav-link" href="/government">
                         Government
                     </Nav.Link>
-                    <Nav.Link className="nav-link" href="#pricing">
-                        MLAs
+                    <Nav.Link className="nav-link" href="/constituency">
+                        Constituency
                     </Nav.Link>
-                    <Nav.Link className="nav-link" href="#pricing">
+                    <Nav.Link className="nav-link" href="/contractor">
                         Contractor
                     </Nav.Link>
                 </Nav>

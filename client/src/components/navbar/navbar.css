@@ -39,7 +39,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .nav-link {
         text-align: left;
     }

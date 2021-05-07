@@ -81,6 +81,7 @@ function Contractor() {
                                     />
                                 </h3>
                                 <Table
+                                    responsive
                                     striped
                                     bordered
                                     hover
