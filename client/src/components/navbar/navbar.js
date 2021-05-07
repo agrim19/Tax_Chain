@@ -4,7 +4,7 @@ import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiceD20 } from "@fortawesome/free-solid-svg-icons";
 
-function NavigationBar() {
+function NavigationBar(props) {
     return (
         <Navbar className="color-nav fixed-top" variant="dark" expand="lg">
             <Navbar.Brand href="#home">
@@ -14,7 +14,7 @@ function NavigationBar() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto ml-auto">
-                    <Nav.Link className="nav-link" href="#home">
+                    <Nav.Link className="nav-link" href="/government">
                         Citizens
                     </Nav.Link>
                     <Nav.Link className="nav-link" href="#features">

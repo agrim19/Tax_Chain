@@ -3,7 +3,7 @@ import { Col, Card } from "react-bootstrap";
 import FindByYearMonthForm from "../findByYearMonthForm/findByYearMonthForm.js";
 import TransactionTable from "../transactionTable/transactionTable.js";
 
-function Transactions() {
+function Transactions(props) {
     return (
         <Col md={12}>
             <Card className="constituency-card constituency-transaction-card">
@@ -11,7 +11,7 @@ function Transactions() {
                     Transactions
                 </h4>
                 <FindByYearMonthForm></FindByYearMonthForm>
-                <TransactionTable></TransactionTable>
+                <TransactionTable data={props.data}></TransactionTable>
             </Card>
         </Col>
     );

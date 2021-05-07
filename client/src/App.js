@@ -4,12 +4,8 @@ import './App.css';
 import Home from './pages/home/home.js';
 import SignUp from './pages/forms/signup';
 import Login from './pages/forms/login';
-import Citizen from './pages/citizen';
-import PayTax from './pages/citizen/PayTax';
-import Transactions from './pages/citizen/transactions';
+import Citizen from './pages/citizen/citizen';
 import GovtDashboard from './pages/government/government.js';
-import PayContractor from './pages/government/payContractor';
-import TaxDetails from './pages/government/taxDetails';
 import Constituency from './pages/constituency/consituency.js';
 import Contractor from './pages/contractor/contractor.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -53,25 +49,9 @@ class App extends Component {
                         <Route path='/' exact component={Home}></Route>
                         <Route path='/signup' component={SignUp}></Route>
                         <Route path='/login' component={Login}></Route>
-                        <Route
-                            path='/citizen/PayTax'
-                            component={PayTax}
-                        ></Route>
-                        <Route
-                            path='/citizen/transactions'
-                            component={Transactions}
-                        ></Route>
                         <Route path='/citizen' component={Citizen}></Route>
                         <Route
-                            path='/government/payContractor'
-                            component={PayContractor}
-                        ></Route>
-                        <Route
-                            path='/government/taxDetails'
-                            component={TaxDetails}
-                        ></Route>
-                        <Route
-                            path='/government'
+                            path='/government/'
                             component={GovtDashboard}
                         ></Route>
                         <Route

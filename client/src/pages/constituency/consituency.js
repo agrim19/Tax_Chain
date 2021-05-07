@@ -11,14 +11,15 @@ import Transactions from "../../components/transactions/transactions.js";
 import "./constituency.css";
 
 function Constituency() {
+    
     return (
         <div>
             <NavigationBar></NavigationBar>
             <Header heading="Malviya Nagar Constituency"></Header>
-            <Container>
+            <Container className="my-5">
                 <Row>
                     <Fund name="Alloted Funds" value="2392138"></Fund>
-                    <Fund name="Surplus Funds" value="3202"></Fund>
+                    <Fund name="Used Funds" value="3202"></Fund>
                 </Row>
                 <Row>
                     <Transactions></Transactions>

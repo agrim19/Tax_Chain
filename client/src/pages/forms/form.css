@@ -46,10 +46,10 @@
     border-bottom: 2px solid #00d395;
 }
 
-select option{
+.input-field select option{
     background-color: black;
 }
-select option:hover{
+.input-field select option:hover{
     background-color: #00d395;
 }
 

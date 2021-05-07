@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "react-bootstrap";
 import TransactionRow from "../transactionRow/trasactionRow.js";
 
-function TransactionTable() {
+function TransactionTable(props) {
     return (
         <>
             <h5 className="constituency-transaction-h2">
@@ -20,6 +20,7 @@ function TransactionTable() {
                         <th>Date</th>
                         <th>Contract ID</th>
                         <th>Amount in INR</th>
+                        <th>Title</th>
                     </tr>
                 </thead>
                 <tbody>
