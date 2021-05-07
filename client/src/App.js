@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Home from './pages/home/home.js';
-import SignUp from './pages/forms/signup';
-import Login from './pages/forms/login';
-import Citizen from './pages/citizen/citizen';
-import GovtDashboard from './pages/government/government.js';
-import Constituency from './pages/constituency/consituency.js';
-import Contractor from './pages/contractor/contractor.js';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import getWeb3 from './getWeb3';
-
-import ContractorContract from './contracts/Contractor.json';
-import GovtAllocate from './contracts/GovtAllocate.json';
-import TransactContract from './contracts/Transact.json';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Home from "./pages/home/home.js";
+import SignUp from "./pages/forms/signup";
+import Login from "./pages/forms/login";
+import Citizen from "./pages/citizen/citizen";
+import GovtDashboard from "./pages/government/government.js";
+import Constituency from "./pages/constituency/consituency.js";
+import Contractor from "./pages/contractor/contractor.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import getWeb3 from "./getWeb3";
+import TransactContract from "./contracts/Transact.json";
 
 class App extends Component {
     state = { loaded: false };
@@ -23,7 +20,7 @@ class App extends Component {
             this.web3 = await getWeb3();
             this.accounts = await this.web3.eth.getAccounts();
             console.log(this.accounts);
-            console.log('?????');
+            console.log("?????");
             this.networkId = await this.web3.eth.net.getId();
             const transactInstance = new this.web3.eth.Contract(
                 TransactContract.abi,
@@ -46,22 +43,22 @@ class App extends Component {
         }
         return (
             <Router>
-                <div className='App'>
+                <div className="App">
                     <Switch>
-                        <Route path='/' exact component={Home}></Route>
-                        <Route path='/signup' component={SignUp}></Route>
-                        <Route path='/login' component={Login}></Route>
-                        <Route path='/citizen' component={Citizen}></Route>
+                        <Route path="/" exact component={Home}></Route>
+                        <Route path="/signup" component={SignUp}></Route>
+                        <Route path="/login" component={Login}></Route>
+                        <Route path="/citizen" component={Citizen}></Route>
                         <Route
-                            path='/government/'
+                            path="/government/"
                             component={GovtDashboard}
                         ></Route>
                         <Route
-                            path='/constituency'
+                            path="/constituency"
                             component={Constituency}
                         ></Route>
                         <Route
-                            path='/contractor'
+                            path="/contractor"
                             component={Contractor}
                         ></Route>
                     </Switch>
