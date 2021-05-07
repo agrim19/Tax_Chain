@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
+import getWeb3 from '../getWeb3';
 
 const Web3JS = React.createContext({});
-export const Web3J = Web3JS.Provider;
 export default Web3JS;
