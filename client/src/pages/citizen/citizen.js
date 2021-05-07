@@ -1,48 +1,12 @@
-import React, { useState } from "react";
-import Contract from "../../components/contract/contract.js";
+import React from "react";
 import Footer from "../../components/footer/footer.js";
 import NavigationBar from "../../components/navbar/navbar.js";
 import Header from "../../components/header/header.js";
 import { Row, Col, Button, Form, Card, Container } from "react-bootstrap";
 import Transactions from "../../components/transactions/transactions.js";
-import Fund from "../../components/fund/fund.js";
+import CurrentTokens from "../../components/currentTokens/currentTokens.js";
+import PurchaseTokens from "../../components/purchaseTokens/purchaseTokens.js";
 import "./citizen.css";
-
-function PurchaseTokens() {
-    return (
-        <Col md={6}>
-            <Card className="fund-card">
-                <Card.Body>
-                    <h4 className="fund-heading">Purchase Tokens</h4>
-                    <Form>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter amount in INR"
-                            />
-                        </Form.Group>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
-                </Card.Body>
-            </Card>
-        </Col>
-    );
-}
-
-function CurrentTokens({ name, value }) {
-    return (
-        <Col md={6}>
-            <Card className="fund-card">
-                <Card.Body>
-                    <h4 className="fund-heading">{name}</h4>
-                    <h5 className="fund-text">{value} INR</h5>
-                </Card.Body>
-            </Card>
-        </Col>
-    );
-}
 
 export default function Citizen() {
     var description =
