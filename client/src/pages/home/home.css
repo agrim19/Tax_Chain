@@ -64,3 +64,24 @@
     border: 2px solid #00d395;
     color: #00d395;
 }
+
+@media only screen and (max-width: 992px) {
+    .white-text {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .row-2 {
+        margin-top: 3rem;
+    }
+
+    .icon-big {
+        margin-top: 2rem;
+        font-size: 10rem;
+    }
+
+    .black-bg {
+        background-color: black;
+        height: 60rem;
+    }
+}

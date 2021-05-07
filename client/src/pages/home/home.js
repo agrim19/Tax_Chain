@@ -29,13 +29,13 @@ function Home() {
                                 enim ad minim veniam, quis nostrud exercitation
                                 ullamco
                             </p>
-                            <p className="bold-green">
+                            <a className="bold-green">
                                 GET STARTED
                                 <FontAwesomeIcon
                                     className="icon-arrow"
                                     icon={faArrowRight}
                                 />
-                            </p>
+                            </a>
                         </Col>
                         <Col md={6}>
                             <FontAwesomeIcon
