@@ -22,6 +22,8 @@ class App extends Component {
         try {
             this.web3 = await getWeb3();
             this.accounts = await this.web3.eth.getAccounts();
+            console.log(this.accounts);
+            console.log('?????');
             this.networkId = await this.web3.eth.net.getId();
             const transactInstance = new this.web3.eth.Contract(
                 TransactContract.abi,
