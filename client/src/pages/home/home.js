@@ -29,7 +29,7 @@ function Home() {
                                 enim ad minim veniam, quis nostrud exercitation
                                 ullamco
                             </p>
-                            <a className="bold-green">
+                            <a href="/login" className="bold-green">
                                 GET STARTED
                                 <FontAwesomeIcon
                                     className="icon-arrow"
@@ -86,7 +86,11 @@ function Home() {
                             imgUrl="https://image.freepik.com/free-vector/engineers-team-discussing-issues-construction-site_74855-4786.jpg"
                         ></WhiteCard>
                         <Col>
-                            <Button size="lg" className="button-green">
+                            <Button
+                                href="/login"
+                                size="lg"
+                                className="button-green"
+                            >
                                 Login
                             </Button>{" "}
                         </Col>
