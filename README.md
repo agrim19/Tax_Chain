@@ -13,9 +13,10 @@ The transparency and immutability of the blockchain helps achieve this aim. We h
 
 
 ## Challenges We Ran Into
-* Integrating React with Etherium. 
+* Integrating React with Ethereum. 
 * Integrating Portis
 * Using FireBase with React
+* Making the right structure for contracts in BlockChain
 
 ## Technologies Used
 
