@@ -1,4 +1,5 @@
-# TaxChain 💸:gem:
+# TaxChain
+<p align="center"><img height="400" src="https://imgur.com/5M1Hh5I.png"></p>
 
 ## Social Problem We Worked On
 We are worked on solving the problem of corruption and creating transparency in the country’s taxation system using Blockchain Tech. In the past few days we have seen the central government and state governments fighting over the shortage of supplies due to Covid. While the government's claim to be working citizens are unsure where their tax money is being used. Our idea is revolutionary as it will make this entire procedure transparent. 
@@ -6,7 +7,7 @@ We are worked on solving the problem of corruption and creating transparency in 
 ## Brief Description of Idea
 The main stakeholders in our idea are the Citizens, the government, constituencies and contractors.  The government allocates funds to MLAs to work in their constituencies however often due to corrupt leaders and corruption at every stage in the process the money is not utilized properly for the citizens. We have decided to make the entire procedure transparent from paying taxes to where your money is being used by the government and constituencies, and from constituencies to contractors. 
 
-![](https://imgur.com/IDDSUTU.png)
+![Flowchart](https://imgur.com/IDDSUTU.png)
 
 ## How BlockChain Helps Here?
 The transparency and immutability of the blockchain helps achieve this aim. We have shifted all tax related transactions to a blockchain, due to which every single transaction taking place in the complete chain will be visible to every person of the country. This way, it will become much easier for the general public to keep track of the total tax collection, they will know whether their funds are being used well or not, hence implementing the required transparency.
