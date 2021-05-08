@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { Col, Button, Form, Card } from 'react-bootstrap';
 import Transact from '../../contracts/Transact.json';
-import Web3JS from '../../services/context.js';
 
 import './purchaseTokens.css';
 
 export default function PurchaseTokens(web3) {
+    const [val, setValue] = useState(0);
     const handleSubmit = async (event) => {
         event.preventDefault();
         web3.web3.eth.getAccounts().then(async (accounts) => {
@@ -16,9 +16,12 @@ export default function PurchaseTokens(web3) {
                 .sendTransaction({
                     from: account,
                     to: contractAddress,
-                    value: 1,
+                    value: val,
                 })
-                .then(alert)
+                .then((result) => {
+                    console.log(result);
+                    alert('Successful');
+                })
                 .catch(alert);
         });
     };
@@ -32,6 +35,9 @@ export default function PurchaseTokens(web3) {
                             <Form.Control
                                 type='text'
                                 placeholder='Enter amount'
+                                onChange={(v) => {
+                                    setValue(v.target.value);
+                                }}
                             />
                         </Form.Group>
                         <Button
