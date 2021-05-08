@@ -44,7 +44,7 @@ function Constituency(web3) {
                 </Row>
                 <Row>
                     <Transactions heading='Transactions in Your Constituency'></Transactions>
-                    <TransferFunds></TransferFunds>
+                    <TransferFunds web3={web3}></TransferFunds>
                     <Kyc web3={web3}></Kyc>
                 </Row>
 
