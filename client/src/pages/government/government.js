@@ -15,6 +15,8 @@ export default function Government(web3) {
     const [account, setAccount] = useState('');
     const [networkId, setNetworkId] = useState('');
     const [contract, setContract] = useState({});
+    const [constId, setConstId] = useState('');
+    const [amount, setAmount] = useState(0);
     useEffect(() => {
         web3.web3.eth.getAccounts().then(async (accounts) => {
             setAccount(accounts[0]);
@@ -57,8 +59,8 @@ export default function Government(web3) {
     const handleTransferFunds = async (event) => {
         event.preventDefault();
         contract.methods
-            .allocateFunds('delhi')
-            .send({ from: account, value: 1 })
+            .allocateFunds(constId)
+            .send({ from: account, value: amount })
             .then((result) => {
                 console.log(result);
                 alert('SUCCESS');
@@ -95,10 +97,20 @@ export default function Government(web3) {
                                                 <input
                                                     type='text'
                                                     placeholder='Enter constituency ID'
+                                                    onChange={(event) => {
+                                                        setConstId(
+                                                            event.target.value
+                                                        );
+                                                    }}
                                                 />
                                                 <input
                                                     type='number'
                                                     placeholder='Amount'
+                                                    onChange={(event) => {
+                                                        setAmount(
+                                                            event.target.value
+                                                        );
+                                                    }}
                                                 />
                                                 <input
                                                     type='text'
