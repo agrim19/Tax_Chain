@@ -11,6 +11,7 @@ The main stakeholders in our idea are the Citizens, the government, constituenci
 ## How BlockChain Helps Here?
 The transparency and immutability of the blockchain helps achieve this aim. We have shifted all tax related transactions to a blockchain, due to which every single transaction taking place in the complete chain will be visible to every person of the country. This way, it will become much easier for the general public to keep track of the total tax collection, they will know whether their funds are being used well or not, hence implementing the required transparency.
 
+## Description of Working
 
 ## Challenges We Ran Into
 * Integrating React with Ethereum. 
@@ -21,7 +22,7 @@ The transparency and immutability of the blockchain helps achieve this aim. We h
 ## Technologies Used
 
 * Solidity(Ethereum)
-* Portis
+* Portis by ShapeShift
 * React.js
 * HTML
 * CSS
