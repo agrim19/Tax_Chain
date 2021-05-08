@@ -44,23 +44,23 @@ Imagine knowing how the government is using your money? How awesome is that!
 ### Before Introduction of TaxChain
 <p float="left">
  <kbd>
-<img height="250" src="https://imgur.com/CbRutfB.png">
+<img height="200" src="https://imgur.com/CbRutfB.png">
  </kbd>
  <kbd>
-<img height="250" src="https://imgur.com/QIkVtIl.png">
+<img height="200" src="https://imgur.com/QIkVtIl.png">
 </kbd>
  <kbd>
-<img height="250" src="https://imgur.com/sBxGwV7.png">
+<img height="200" src="https://imgur.com/sBxGwV7.png">
   </kbd>
  </p>
  
  ### After Introduction of TaxChain
 <p float="left">
   <kbd>
-<img height="250" src="https://imgur.com/HGATwcX.png">
+<img height="200" src="https://imgur.com/HGATwcX.png">
  </kbd>
    <kbd>
-<img height="250" src="https://imgur.com/CQbFWnj.png">
+<img height="200" src="https://imgur.com/CQbFWnj.png">
  </kbd>
  </p>
  
