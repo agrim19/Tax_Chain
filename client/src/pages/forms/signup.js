@@ -14,6 +14,7 @@ function SignUp() {
   const lastNameRef = useRef();
   const blockChainAddressRef = useRef();
   const designationRef = useRef();
+  const history = useHistory();
 
   const { signup } = useAuth();
   // console.log(signup)
@@ -24,8 +25,7 @@ function SignUp() {
     e.preventDefault();
     if (
       emailRef.current.value === "" ||
-      passwordRef.current.value == "" ||
-      designationRef.current.value === ""
+      passwordRef.current.value == ""
     ) {
       return setError("Please fill all fields");
     }
