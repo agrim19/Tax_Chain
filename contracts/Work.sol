@@ -4,10 +4,10 @@ pragma solidity ^0.8.0;
 import "./Contractor.sol";
 
 contract Work{
-    Contractor public owner;
+    address public owner;
     uint public budget;
 
-    constructor(Contractor _owner){
+    constructor(address _owner){
         owner = _owner;
     }
 

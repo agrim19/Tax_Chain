@@ -6,6 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract GovtDetails is Ownable{
     address public govtAddress;
     mapping(string=>address) constituencyAddress;
+    mapping(address=>bool) public isContractor;
     address emptyAddress;
 
     function getConstituencyAddress(string memory cName) public view returns(address){
@@ -19,5 +20,9 @@ contract GovtDetails is Ownable{
 
     function setGovtAddress(address _addr) public onlyOwner{
         govtAddress = _addr;
+    }
+
+    function setContractor(address _addr) public onlyOwner{
+        isContractor[_addr] = true;
     }
 }

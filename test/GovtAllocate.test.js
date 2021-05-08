@@ -17,7 +17,6 @@ contract('GovtAllocate', async (accounts) => {
             instance.getAllocation('delhi')
         ).to.eventually.be.a.bignumber.equals(new BN('1'));
     });
-
     it('should not allow non-govt accounts to allocate and send money', async () => {
         let govt = await Govt.deployed();
         await govt.setConstituencyAddress('delhi', accounts[1], {

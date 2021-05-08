@@ -2,6 +2,7 @@ const KYC = artifacts.require('KYC');
 const GovtDetails = artifacts.require('GovtDetails');
 const Transaction = artifacts.require('Transact');
 const GovtAllocate = artifacts.require('GovtAllocate');
+const Contractor = artifacts.require('Contractor');
 
 module.exports = async (deployer) => {
     let accounts = await web3.eth.getAccounts();
@@ -11,4 +12,5 @@ module.exports = async (deployer) => {
     instance.setGovtAddress(accounts[0]);
     await deployer.deploy(Transaction, KYC.address, GovtDetails.address);
     await deployer.deploy(GovtAllocate, GovtDetails.address);
+    await deployer.deploy(Contractor);
 };
