@@ -6,10 +6,6 @@ import Web3JS from '../../services/context.js';
 import './purchaseTokens.css';
 
 export default function PurchaseTokens(web3) {
-    // const { things, setThings } = useContext(Web3JS);
-
-    // console.log(things);
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         web3.web3.eth.getAccounts().then(async (accounts) => {
