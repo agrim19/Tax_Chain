@@ -11,14 +11,13 @@ import Contractor from './pages/contractor/contractor.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import getWeb3 from './getWeb3';
 import Web3JS from './services/context';
-import { AuthProvider } from "./pages/contexts/AuthContext";
+import { AuthProvider } from './pages/contexts/AuthContext';
 
 function App() {
     const [loaded, setLoaded] = useState(false);
     const [web3, setWeb3] = useState({});
     const [accounts, setAccounts] = useState({});
     const [networkId, setNetworkId] = useState({});
-    const { web3JS, setweb3JS } = useContext(Web3JS);
 
     useEffect(() => {
         const handler = async () => {
@@ -72,7 +71,10 @@ function Renderer(params) {
                         path='/constituency'
                         render={() => <Constituency web3={params.web3} />}
                     ></Route>
-                    <Route path='/contractor' component={Contractor}></Route>
+                    <Route
+                        path='/contractor'
+                        render={() => <Contractor web3={params.web3} />}
+                    ></Route>
                 </Switch>
             </div>
         </Router>
