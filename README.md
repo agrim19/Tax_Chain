@@ -1,6 +1,32 @@
 # TaxChain
 <p align="center"><img height="400" src="https://imgur.com/2CBSgmL.png"></p>
 
+
+## Impact of TaxChain
+
+### Before Introduction of TaxChain
+<p float="left">
+ <kbd>
+<img height="200" src="https://imgur.com/CbRutfB.png">
+ </kbd>
+ <kbd>
+<img height="200" src="https://imgur.com/QIkVtIl.png">
+</kbd>
+ <kbd>
+<img height="200" src="https://imgur.com/sBxGwV7.png">
+  </kbd>
+ </p>
+ 
+ ### After Introduction of TaxChain
+<p float="left">
+  <kbd>
+<img height="200" src="https://imgur.com/HGATwcX.png">
+ </kbd>
+   <kbd>
+<img height="200" src="https://imgur.com/CQbFWnj.png">
+ </kbd>
+ </p>
+ 
 ## Social Problem We Worked On
 We are worked on solving the problem of corruption and creating transparency in the country’s taxation system using Blockchain Tech. In the past few days we have seen the central government and state governments fighting over the shortage of supplies due to Covid. While the government's claim to be working citizens are unsure where their tax money is being used. Our idea is revolutionary as it will make this entire procedure transparent. 
 
@@ -38,31 +64,6 @@ It will help in reducing and avoiding frauds as anyone doing so can be caught ea
 Even the money a state govt entity allots to the contractors for various projects is well tracked. This can help keep track of exactly where they used the money, hence again reducing corruption.
 4. **Relief for citizens**\
 Imagine knowing how the government is using your money? How awesome is that! 
-
-## Impact of TaxChain
-
-### Before Introduction of TaxChain
-<p float="left">
- <kbd>
-<img height="200" src="https://imgur.com/CbRutfB.png">
- </kbd>
- <kbd>
-<img height="200" src="https://imgur.com/QIkVtIl.png">
-</kbd>
- <kbd>
-<img height="200" src="https://imgur.com/sBxGwV7.png">
-  </kbd>
- </p>
- 
- ### After Introduction of TaxChain
-<p float="left">
-  <kbd>
-<img height="200" src="https://imgur.com/HGATwcX.png">
- </kbd>
-   <kbd>
-<img height="200" src="https://imgur.com/CQbFWnj.png">
- </kbd>
- </p>
  
 ## Developers
 <table>
