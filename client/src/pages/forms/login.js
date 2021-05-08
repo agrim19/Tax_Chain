@@ -1,39 +1,74 @@
-import React from "react";
-import NavigationBar from "../../components/navbar/navbar.js";
+import React, { useState, useRef } from "react";
+import { useAuth } from "../contexts/AuthContext";
+import { Link, useHistory } from "react-router-dom";
+import { Alert } from "react-bootstrap";
 import "./form.css";
 
 function Login() {
-    return (
-        <div className="auth-black-bg">
-            <NavigationBar></NavigationBar>
-            <div className="form-container">
-                <h1>Login Up</h1>
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { login, currentUser } = useAuth();
+  // console.log(login)
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
-                <form action="/login" method="POST">
-                    <div className="input-field">
-                        <i className="bx bxs-user"></i>
-                        <input
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                        />
-                    </div>
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (emailRef.current.value === "" || passwordRef.current.value == "") {
+      return setError("Please fill all fields");
+    }
 
-                    <div className="input-field">
-                        <i className="bx bxs-key"></i>
-                        <input
-                            type="password"
-                            name="password"
-                            id="password"
-                            placeholder="password"
-                        />
-                    </div>
-                    <button className="btn-submit">Login!</button>
-                </form>
-            </div>
-        </div>
-    );
+    try {
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      history.push("/");
+    } catch (err) {
+      setError(err.message);
+      console.log(err.message);
+    }
+
+    setLoading(false);
+  }
+  return (
+    <div className="">
+      <div className="form-container">
+        <h1>Login Up</h1>
+        {error ? (
+          <Alert variant="success" className="mb-5">
+            {error}
+          </Alert>
+        ) : (
+          ""
+        )}
+        <form onSubmit={handleSubmit}>
+          <div className="input-field">
+            <i className="bx bxs-user"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              ref={emailRef}
+            />
+          </div>
+
+          <div className="input-field">
+            <i className="bx bxs-key"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="password"
+              minLength="6"
+              ref={passwordRef}
+            />
+          </div>
+          <button className="btn-submit">Login!</button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Login;

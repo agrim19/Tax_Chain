@@ -12,8 +12,8 @@
     max-width: 400px;
 }
 
-.form-container h1 {
-    color: white;
+.form-container h1{
+    /* color: white; */
     font-size: 3rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -24,11 +24,10 @@
     width: 100%;
     background-color: transparent;
     height: 30px;
-    color: white;
+    color: #00d395;
 }
-.input-field input:focus {
-    outline: none !important;
-    color: white;
+.input-field input:focus{
+    outline:none!important;
 }
 .input-field {
     display: flex;
@@ -50,10 +49,10 @@
     border-bottom: 2px solid #00d395;
 }
 
-.input-field select option {
+/* .input-field select option{
     background-color: black;
-}
-.input-field select option:hover {
+} */
+.input-field select option:hover{
     background-color: #00d395;
 }
 
@@ -61,11 +60,16 @@
     outline: none;
 }
 
-button.btn-submit {
+button.btn-submit{
     width: 100%;
     background-color: #00d395;
     color: white;
     border: none;
     height: 40px;
     cursor: pointer;
+}
+button.btn-submit:hover{
+    background-color: transparent;
+    color: #00d395;
+    border: 2px solid #00d395;
 }

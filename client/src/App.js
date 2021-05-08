@@ -11,6 +11,7 @@ import Contractor from './pages/contractor/contractor.js';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import getWeb3 from './getWeb3';
 import Web3JS from './services/context';
+import { AuthProvider } from "./pages/contexts/AuthContext";
 
 function App() {
     const [loaded, setLoaded] = useState(false);
@@ -42,7 +43,13 @@ function App() {
     if (!loaded) {
         return <div>Loading Web3, accounts, and contract...</div>;
     }
-    return <Renderer web3={web3} />;
+    return (
+        <>
+            <AuthProvider>
+                <Renderer web3={web3} />
+            </AuthProvider>
+        </>
+    );
 }
 
 function Renderer(params) {
