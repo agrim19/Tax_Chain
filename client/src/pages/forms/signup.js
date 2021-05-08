@@ -18,6 +18,7 @@ function SignUp() {
     // console.log(signup)
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -43,6 +44,7 @@ function SignUp() {
                     console.error('Error writing document: ', error);
                     setError('Error writing document:');
                 });
+            history.push('/');
 
             console.log('Account created');
         } catch (err) {
