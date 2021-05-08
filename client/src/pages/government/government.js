@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Row, Col, Card, Container } from "react-bootstrap";
 import Header from "../../components/header/header.js";
@@ -8,6 +9,18 @@ import Transactions from "../../components/transactions/transactions.js";
 import "./government.css";
 import GovtAllocate from "../../contracts/GovtAllocate.json";
 import AddConstituency from "../../components/addConstituency/addConstituency.js";
+=======
+import React from 'react';
+import { Row, Col, Card, Container } from 'react-bootstrap';
+import Header from '../../components/header/header.js';
+import NavigationBar from '../../components/navbar/navbar.js';
+import Footer from '../../components/footer/footer.js';
+import Fund from '../../components/fund/fund.js';
+import Transactions from '../../components/transactions/transactions.js';
+import './government.css';
+import GovtAllocate from '../../contracts/GovtAllocate.json';
+import AddConstituency from '../../components/addConstituency/addConstituency.js';
+>>>>>>> 0f1dd19f5bbcf0e063659a6280f875f1eb48e40e
 
 export default function Government(web3) {
   const handleTransferFunds = async (event) => {
