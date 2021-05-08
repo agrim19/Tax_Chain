@@ -39,7 +39,31 @@ Even the money a state govt entity allots to the contractors for various project
 4. **Relief for citizens**\
 Imagine knowing how the government is using your money? How awesome is that! 
 
+## Impact of TaxChain
 
+### Before Introduction of TaxChain
+<p float="left">
+ <kbd>
+<img height="250" src="https://imgur.com/CbRutfB.png">
+ </kbd>
+ <kbd>
+<img height="250" src="https://imgur.com/QIkVtIl.png">
+</kbd>
+ <kbd>
+<img height="250" src="https://imgur.com/sBxGwV7.png">
+  </kbd>
+ </p>
+ 
+ ### After Introduction of TaxChain
+<p float="left">
+  <kbd>
+<img height="250" src="https://imgur.com/HGATwcX.png">
+ </kbd>
+   <kbd>
+<img height="250" src="https://imgur.com/CQbFWnj.png">
+ </kbd>
+ </p>
+ 
 ## Developers
 <table>
   <tr>
