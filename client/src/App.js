@@ -63,7 +63,7 @@ function Renderer(params) {
                     ></Route>
                     <Route
                         path='/constituency'
-                        component={Constituency}
+                        render={() => <Constituency web3={params.web3} />}
                     ></Route>
                     <Route path='/contractor' component={Contractor}></Route>
                 </Switch>
