@@ -27,13 +27,13 @@ The transparency and immutability of the blockchain helps achieve this aim. We h
 * Firebase
 
 ## Use Cases and Future Scope
-1. **Reducing Corruption and Creating Transparency**
+1. **Reducing Corruption and Creating Transparency**\
 TaxChain can help reduce corruption in India as it will make the entire process from tax collection, to how these funds are distributed and further used by the constituencies very transparent. Citizens will be able to know whether the funds allotted to their constituency are being used properly or not.
-2. **Prevents Frauds**
+2. **Prevents Frauds**\
 It will help in reducing and avoiding frauds as anyone doing so can be caught easily. That's the advantage of blockchain technology. 
-3. **Tracking Money Allocated to Contractors**
+3. **Tracking Money Allocated to Contractors**\
 Even the money a state govt entity allots to the contractors for various projects is well tracked. This can help keep track of exactly where they used the money, hence again reducing corruption.
-4. **Relief for citizens**
+4. **Relief for citizens**\
 Imagine knowing how the government is using your money? How awesome is that! 
 
 
