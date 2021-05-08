@@ -7,16 +7,21 @@ import Transactions from '../../components/transactions/transactions.js';
 import CurrentTokens from '../../components/currentTokens/currentTokens.js';
 import PurchaseTokens from '../../components/purchaseTokens/purchaseTokens.js';
 import Transact from '../../contracts/Transact.json';
+import { useAuth } from '../contexts/AuthContext';
 import './citizen.css';
 // import { web3, accounts } from '../../SetupBlockchain';
 
 export default function Citizen({ web3 }) {
+    const { currentUser } = useAuth();
     var description =
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sollicitudin tempor id eu nisl nunc. Malesuada bibendum arcu vitae elementum curabitur vitae. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nisl vel pretium lectus quam id leo in vitae turpis. A lacus vestibulum sed arcu non odio euismod. Tincidunt vitae semper quis lectus nulla. Pulvinar elementum integer enim neque volutpat ac. Tortor at risus viverra adipiscing at. Placerat in egestas erat imperdiet sed. Turpis tincidunt id aliquet risus. Sed enim ut sem viverra. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc.';
     const handlePayTax = async (event) => {
         event.preventDefault();
+        let userAddress = currentUser ? currentUser.blockChainAddress : '';
+
         web3.eth.getAccounts().then(async (accounts) => {
             let account = accounts[0];
+            console.log(account);
             let networkId = await web3.eth.net.getId();
             let contractAddress = Transact.networks[networkId].address;
             let transactContract = new web3.eth.Contract(
@@ -61,60 +66,11 @@ export default function Citizen({ web3 }) {
                                     <h2>Pay Tax</h2>
                                     <Form>
                                         <Form.Row>
-                                            <Form.Group
-                                                as={Col}
-                                                controlId='formGridEmail'
-                                            >
-                                                <Form.Label>Email</Form.Label>
+                                            <Form.Group as={Col}>
                                                 <Form.Control
-                                                    type='email'
-                                                    placeholder='Enter email'
+                                                    type='number'
+                                                    placeholder='Amount'
                                                 />
-                                            </Form.Group>
-                                        </Form.Row>
-                                        <Form.Row>
-                                            <Form.Group
-                                                as={Col}
-                                                controlId='formGridPassword'
-                                            >
-                                                <Form.Label>PAN No</Form.Label>
-                                                <Form.Control
-                                                    type='text'
-                                                    placeholder='PAN No'
-                                                />
-                                            </Form.Group>
-                                        </Form.Row>
-                                        <Form.Row>
-                                            <Form.Group
-                                                as={Col}
-                                                controlId='formGridCity'
-                                            >
-                                                <Form.Label>City</Form.Label>
-                                                <Form.Control />
-                                            </Form.Group>
-
-                                            <Form.Group
-                                                as={Col}
-                                                controlId='formGridState'
-                                            >
-                                                <Form.Label>State</Form.Label>
-                                                <Form.Control
-                                                    as='select'
-                                                    defaultValue='Choose...'
-                                                >
-                                                    <option>State</option>
-                                                    <option>Delhi</option>
-                                                    <option>Haryana</option>
-                                                    <option>Rajasthan</option>
-                                                </Form.Control>
-                                            </Form.Group>
-
-                                            <Form.Group
-                                                as={Col}
-                                                controlId='formGridZip'
-                                            >
-                                                <Form.Label>Zip</Form.Label>
-                                                <Form.Control />
                                             </Form.Group>
                                         </Form.Row>
                                         <Button
