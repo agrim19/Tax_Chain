@@ -56,11 +56,12 @@ function SignUp() {
     }
 
     return (
-        <div className=''>
-            <div className='form-container'>
+        <div className='auth-black-bg'>
+            <NavigationBar></NavigationBar>
+            <div className='form-container form-container-signup'>
                 <h1>Sign Up</h1>
                 {error ? (
-                    <Alert variant='success' className='mb-5'>
+                    <Alert variant='succes<NavigationBar></NavigationBar>s' className='mb-5'>
                         {error}
                     </Alert>
                 ) : (
@@ -137,6 +138,7 @@ function SignUp() {
                     <button className='btn-submit'>SignUp!</button>
                 </form>
             </div>
+            <Footer></Footer>
         </div>
     );
 }
