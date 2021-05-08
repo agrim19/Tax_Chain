@@ -1,7 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Row, Col, Card } from 'react-bootstrap';
+=======
 import { Row, Col, Card, Container } from 'react-bootstrap';
 import NavigationBar from '../../components/navbar/navbar.js';
+>>>>>>> ed3829cff06dc19b7a2c55a7512705a137eb6533
 import Header from '../../components/header/header.js';
+import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
 import Fund from '../../components/fund/fund.js';
 import Transactions from '../../components/transactions/transactions.js';

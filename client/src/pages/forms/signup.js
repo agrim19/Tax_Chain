@@ -3,6 +3,8 @@ import { useAuth } from '../contexts/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
 import { db } from '../../firebase';
+import NavigationBar from '../../components/navbar/navbar.js';
+import Footer from '../../components/footer/footer.js';
 import './form.css';
 
 function SignUp() {

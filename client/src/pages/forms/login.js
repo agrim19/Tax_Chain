@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { Alert } from "react-bootstrap";
+import NavigationBar from "../../components/navbar/navbar.js";
+import Footer from "../../components/footer/footer.js";
 import "./form.css";
 
 function Login() {
@@ -31,9 +33,10 @@ function Login() {
     setLoading(false);
   }
   return (
-    <div className="">
-      <div className="form-container">
-        <h1>Login Up</h1>
+    <div className="auth-black-bg">
+      <NavigationBar></NavigationBar>
+      <div className="form-container form-container-login">
+        <h1>Login</h1>
         {error ? (
           <Alert variant="success" className="mb-5">
             {error}
@@ -67,6 +70,7 @@ function Login() {
           <button className="btn-submit">Login!</button>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
