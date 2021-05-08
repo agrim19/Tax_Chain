@@ -54,7 +54,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -67,7 +68,8 @@
       "name": "allocateFunds",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -86,7 +88,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract GovtDetails\",\"name\":\"_gov\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"cName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"prevAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newAmount\",\"type\":\"uint256\"}],\"name\":\"AllocationDone\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"constituency\",\"type\":\"string\"}],\"name\":\"allocateFunds\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"allocations\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"constituency\",\"type\":\"string\"}],\"name\":\"getAllocation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/agrim/Desktop/Coding work/BlockchainDev/TaxChain/contracts/GovtAllocate.sol\":\"GovtAllocate\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/agrim/Desktop/Coding work/BlockchainDev/TaxChain/contracts/GovtAllocate.sol\":{\"keccak256\":\"0x5b7d4b5d99e46bdcd4a6c57895b5333bd5d66cab6642998a0c8e58221329998a\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://69fe2e551181aa7a127146e33df6a25c58f478545001d748fcfdda1c9cd54fc8\",\"dweb:/ipfs/QmPPPDnwh6kdxmyA85G3kTkwPcbsdxHagrsi2eXzgsxxQW\"]},\"/Users/agrim/Desktop/Coding work/BlockchainDev/TaxChain/contracts/GovtDetails.sol\":{\"keccak256\":\"0xb63a488373915c6bfac21dac83b06324a49d0a3ee9c61b27d481ed6e232a73f7\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://89f4eced3a96553e270d55bb98752e79319aedef78d56aec5e6f9cadd44d03ec\",\"dweb:/ipfs/QmZjqpTj2Ao7fbQTiRTWX8k15hGKqdKumT6ECbofRMTqvs\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x1cae4f85f114ff17b90414f5da67365b1d00337abb5bce9bf944eb78a2c0673c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d5ff16b336ce8f906478d5f2eecc6435e00833bdc0b92f6b209cf9e92cb5b2b7\",\"dweb:/ipfs/QmRD1rAZEqQ73C33cdA3QoUyBDMEWnNKNMc6PNkAZWHeQQ\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xf930d2df426bfcfc1f7415be724f04081c96f4fb9ec8d0e3a521c07692dface0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fc2bfdea0d2562c76fb3c4cf70a86c6ba25c5a30e8f8515c95aafdf8383f8395\",\"dweb:/ipfs/QmTbFya18786ckJfLYUoWau9jBTKfmWnWm5XSViWvB7PXN\"]}},\"version\":1}",
@@ -7518,8 +7521,8 @@
     "3": {
       "events": {},
       "links": {},
-      "address": "0x9c54AFC61a0E7DC949E29E39c14aB7CA626e088E",
-      "transactionHash": "0xb2541381ee8b3bb86358ef395c810a96c7308b045127d96c368d6d7340cb43c4"
+      "address": "0xF806D2b26b20A462c0F37816559423D89021a7f9",
+      "transactionHash": "0xa378d278fea19f40093c4f28e086fbd5d22c618bbe81cb197a9240b6d56bc35d"
     },
     "5777": {
       "events": {},
@@ -7529,7 +7532,8 @@
     }
   },
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-05-08T15:02:13.568Z",
+  "updatedAt": "2021-05-08T15:10:37.930Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

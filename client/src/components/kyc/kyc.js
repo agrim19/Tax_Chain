@@ -1,8 +1,9 @@
-import React from "react";
-import { Col, Button, Form, Card } from "react-bootstrap";
-import KYC from "../../contracts/KYC.json";
+import React, { useState } from 'react';
+import { Col, Button, Form, Card } from 'react-bootstrap';
+import KYC from '../../contracts/KYC.json';
 
 export default function Kyc(web3) {
+    const [acc, setAcc] = useState('');
     const handleSubmit = async (event) => {
         event.preventDefault();
         web3.web3.web3.eth.getAccounts().then(async (accounts) => {
@@ -14,25 +15,31 @@ export default function Kyc(web3) {
                 KYC.networks[networkId] && KYC.networks[networkId].address
             );
             kycContract.methods
-                .completeKYC(account)
+                .completeKYC(acc)
                 .send({ from: account })
                 .then((result) => {
                     console.log(result);
-                    alert("Successful");
+                    alert('Successful');
                 })
                 .catch(alert);
         });
     };
     return (
         <Col md={6}>
-            <Card className="constituency-card  constituency-form-card">
+            <Card className='constituency-card  constituency-form-card'>
                 <Form>
                     <Form.Group>
-                        <Form.Control type="text" placeholder="Enter Address" />
+                        <Form.Control
+                            type='text'
+                            placeholder='Enter Address'
+                            onChange={(event) => {
+                                setAcc(event.target.value);
+                            }}
+                        />
                     </Form.Group>
                     <Button
-                        className="constituency-form-button-green"
-                        type="submit"
+                        className='constituency-form-button-green'
+                        type='submit'
                         onClick={handleSubmit}
                     >
                         Confirm KYC

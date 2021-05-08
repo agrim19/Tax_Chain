@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Button, Form, Card, Container } from 'react-bootstrap';
 import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
@@ -12,6 +12,7 @@ import GovtDetails from '../../contracts/GovtDetails.json';
 import './constituency.css';
 
 function Constituency(web3) {
+    const [acc, setAcc] = useState('');
     const handleSubmit = async (event) => {
         event.preventDefault();
         web3.web3.eth.getAccounts().then(async (accounts) => {
@@ -23,7 +24,7 @@ function Constituency(web3) {
                 contractAddress
             );
             contract.methods
-                .setContractor(account)
+                .setContractor(acc)
                 .send({ from: account })
                 .then((result) => {
                     console.log(result);
@@ -60,6 +61,9 @@ function Constituency(web3) {
                                         <Form.Control
                                             type='text'
                                             placeholder='0x0000000000000000'
+                                            onChange={(v) => {
+                                                setAcc(v.target.value);
+                                            }}
                                         />
                                     </Form.Group>
                                 </Form.Row>
