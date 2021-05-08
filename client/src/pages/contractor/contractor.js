@@ -6,6 +6,7 @@ import Header from "../../components/header/header.js";
 import Contract from "../../components/contract/contract.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWrench, faFileContract } from "@fortawesome/free-solid-svg-icons";
+import GenerateContract from "../../components/generateContract/generateContract.js";
 
 import "./contractor.css";
 
@@ -18,6 +19,7 @@ function Contractor() {
             <Header heading="Contractor: Rahul Sharma"></Header>
             <Container>
                 <Row>
+                    <GenerateContract></GenerateContract>
                     <Col md={12}>
                         <Card className="table-card">
                             <Card.Body>

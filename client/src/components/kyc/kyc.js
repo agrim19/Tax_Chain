@@ -1,6 +1,6 @@
-import React from 'react';
-import { Col, Button, Form, Card } from 'react-bootstrap';
-import KYC from '../../contracts/KYC.json';
+import React from "react";
+import { Col, Button, Form, Card } from "react-bootstrap";
+import KYC from "../../contracts/KYC.json";
 
 export default function Kyc(web3) {
     const handleSubmit = async (event) => {
@@ -18,21 +18,21 @@ export default function Kyc(web3) {
                 .send({ from: account })
                 .then((result) => {
                     console.log(result);
-                    alert('Successful');
+                    alert("Successful");
                 })
                 .catch(alert);
         });
     };
     return (
-        <Col md={12}>
-            <Card className='constituency-card  constituency-form-card'>
+        <Col md={6}>
+            <Card className="constituency-card  constituency-form-card">
                 <Form>
                     <Form.Group>
-                        <Form.Control type='text' placeholder='Enter Address' />
+                        <Form.Control type="text" placeholder="Enter Address" />
                     </Form.Group>
                     <Button
-                        className='constituency-form-button-green'
-                        type='submit'
+                        className="constituency-form-button-green"
+                        type="submit"
                         onClick={handleSubmit}
                     >
                         Confirm KYC
