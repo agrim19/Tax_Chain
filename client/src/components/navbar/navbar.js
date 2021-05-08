@@ -7,7 +7,7 @@ import { faDiceD20 } from "@fortawesome/free-solid-svg-icons";
 function NavigationBar(props) {
     return (
         <Navbar className="color-nav fixed-top" variant="dark" expand="lg">
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
                 <FontAwesomeIcon className="icon" icon={faDiceD20} />
                 TaxChain
             </Navbar.Brand>
