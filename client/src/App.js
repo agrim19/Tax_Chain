@@ -59,7 +59,7 @@ function Renderer(params) {
                     ></Route>
                     <Route
                         path='/government/'
-                        component={GovtDashboard}
+                        render={() => <GovtDashboard web3={params.web3} />}
                     ></Route>
                     <Route
                         path='/constituency'
