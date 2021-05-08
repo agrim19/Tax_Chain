@@ -1,5 +1,5 @@
 # TaxChain
-<p align="center"><img height="400" src="https://imgur.com/2CBSgmL.png"></p>
+<p align="center"><img src="https://imgur.com/VIOIKKZ.png"></p>
 
 
 ## Impact of TaxChain
