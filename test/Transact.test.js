@@ -14,7 +14,6 @@ contract('Transact Test', async (accounts) => {
         //prettier-ignore
         expect(instance.sendTransaction({ to: transactAddress, from: accounts[2], value: 1 })).to.be.rejected;
     });
-
     it('KYCed should be able to buy tokens', async () => {
         let govt = await Govt.deployed();
         let kyc = await KYC.deployed();
@@ -26,7 +25,6 @@ contract('Transact Test', async (accounts) => {
         //prettier-ignore
         expect(instance.tokenBalance(accounts[1])).to.eventually.be.a.bignumber.equals(new BN('1'));
     });
-
     it('should be able to pay tax using tokens', async () => {
         let instance = await Transact.deployed();
         //prettier-ignore
@@ -38,7 +36,6 @@ contract('Transact Test', async (accounts) => {
             instance.taxPaid(accounts[1])
         ).to.eventually.be.a.bignumber.equals(new BN('1'));
     });
-
     it('should not be able to pay tax using less tokens', async () => {
         let instance = await Transact.deployed();
         //prettier-ignore

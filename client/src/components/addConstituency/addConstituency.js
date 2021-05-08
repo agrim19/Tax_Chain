@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { Col, Button, Form, Card } from 'react-bootstrap';
+import GovtDetails from '../../contracts/GovtDetails.json';
 
-function TransferFunds(web3) {
-    const [toAccount, setToAccount] = useState('');
-    const [toValue, setToValue] = useState(0);
+function AddConstituency(web3) {
+    const [name, setName] = useState('');
+    const [addr, setAddr] = useState('');
     const handleSubmit = async (event) => {
         event.preventDefault();
         web3.web3.web3.eth.getAccounts().then(async (accounts) => {
             let account = accounts[0];
-            web3.web3.web3.eth
-                .sendTransaction({
-                    from: account,
-                    value: toValue,
-                    to: toAccount,
-                })
+            let networkId = await web3.web3.web3.eth.net.getId();
+            let contractAddress = await GovtDetails.networks[networkId].address;
+            let contract = new web3.web3.web3.eth.Contract(
+                GovtDetails.abi,
+                contractAddress
+            );
+            contract.methods
+                .setConstituencyAddress(name.toLowerCase(), addr)
+                .send({ from: account })
                 .then((result) => {
                     console.log(result);
                     alert('SUCCESS');
@@ -22,25 +26,25 @@ function TransferFunds(web3) {
         });
     };
     return (
-        <Col md={6}>
+        <Col md={12}>
             <Card className='constituency-card  constituency-form-card'>
                 <Form>
                     <Form.Group>
                         <Form.Control
                             type='text'
-                            placeholder='Contract ID'
+                            placeholder='Constituency Name'
                             onChange={(event) => {
-                                setToAccount(event.target.value);
+                                setName(event.target.value);
                             }}
                         />
                     </Form.Group>
 
                     <Form.Group>
                         <Form.Control
-                            type='number'
-                            placeholder='Amount'
+                            type='text'
+                            placeholder='Constituency Address'
                             onChange={(event) => {
-                                setToValue(event.target.value);
+                                setAddr(event.target.value);
                             }}
                         />
                     </Form.Group>
@@ -49,7 +53,7 @@ function TransferFunds(web3) {
                         type='submit'
                         onClick={handleSubmit}
                     >
-                        Transfer Funds
+                        Add Constituency
                     </Button>
                 </Form>
             </Card>
@@ -57,4 +61,4 @@ function TransferFunds(web3) {
     );
 }
 
-export default TransferFunds;
+export default AddConstituency;
