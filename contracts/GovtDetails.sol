@@ -10,6 +10,8 @@ contract GovtDetails is Ownable {
     mapping(address => bool) public isConstituency;
     address emptyAddress;
 
+    event ContractorAdded(address _who);
+
     modifier onlyConstituency() {
         require(
             isConstituency[msg.sender],
@@ -49,5 +51,6 @@ contract GovtDetails is Ownable {
 
     function setContractor(address _addr) public {
         isContractor[_addr] = true;
+        emit ContractorAdded(_addr);
     }
 }
