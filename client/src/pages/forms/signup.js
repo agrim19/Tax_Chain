@@ -3,6 +3,8 @@ import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import { db } from "../../firebase";
+import NavigationBar from "../../components/navbar/navbar.js";
+import Footer from "../../components/footer/footer.js";
 import "./form.css";
 
 function SignUp() {
@@ -49,6 +51,7 @@ function SignUp() {
         });
 
       console.log("Account created");
+      history.push("/");
     } catch (err) {
       setError(err.message);
       console.log(err);
@@ -58,8 +61,9 @@ function SignUp() {
   }
 
   return (
-    <div className="">
-      <div className="form-container">
+    <div className="auth-black-bg">
+      <NavigationBar></NavigationBar>
+      <div className="form-container form-container-signup">
         <h1>Sign Up</h1>
         {error ? (
           <Alert variant="success" className="mb-5">
@@ -117,7 +121,7 @@ function SignUp() {
             />
           </div> */}
 
-          <div className="input-field">
+          {/* <div className="input-field">
             <select name="Designation" id="Designation" ref={designationRef}>
               <option value="" hidden>
                 Designation
@@ -127,7 +131,7 @@ function SignUp() {
               <option value="constituency">Constituency</option>
               <option value="contractor">Contractor</option>
             </select>
-          </div>
+          </div> */}
 
           <div className="input-field">
             {/* <i className="bx bxs-key"></i> */}
@@ -143,6 +147,7 @@ function SignUp() {
           <button className="btn-submit">SignUp!</button>
         </form>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
