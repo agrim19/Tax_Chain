@@ -1,5 +1,5 @@
 # TaxChain
-<p align="center"><img height="400" src="https://imgur.com/5M1Hh5I.png"></p>
+<p align="center"><img height="400" src="https://imgur.com/2CBSgmL.png"></p>
 
 ## Social Problem We Worked On
 We are worked on solving the problem of corruption and creating transparency in the country’s taxation system using Blockchain Tech. In the past few days we have seen the central government and state governments fighting over the shortage of supplies due to Covid. While the government's claim to be working citizens are unsure where their tax money is being used. Our idea is revolutionary as it will make this entire procedure transparent. 
