@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Col, Button, Form, Card } from 'react-bootstrap';
 import './generateContract.css';
 import Contractor from '../../contracts/Contractor.json';
+import { db } from '../../firebase';
 
 function GenerateContract(web3) {
     const [account, setAccount] = useState('');
