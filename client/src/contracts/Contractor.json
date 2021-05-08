@@ -503,7 +503,7 @@
         32
       ],
       "Work": [
-        498
+        532
       ]
     },
     "id": 33,
@@ -527,7 +527,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 33,
-        "sourceUnit": 499,
+        "sourceUnit": 533,
         "src": "63:20:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -536,7 +536,7 @@
         "abstract": false,
         "baseContracts": [],
         "contractDependencies": [
-          498
+          532
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
@@ -639,7 +639,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Work_$498",
+                        "typeIdentifier": "t_contract$_Work_$532",
                         "typeString": "contract Work"
                       },
                       "typeName": {
@@ -649,13 +649,13 @@
                           "id": 11,
                           "name": "Work",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 498,
+                          "referencedDeclaration": 532,
                           "src": "206:4:0"
                         },
-                        "referencedDeclaration": 498,
+                        "referencedDeclaration": 532,
                         "src": "206:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Work_$498",
+                          "typeIdentifier": "t_contract$_Work_$532",
                           "typeString": "contract Work"
                         }
                       },
@@ -707,7 +707,7 @@
                       "nodeType": "NewExpression",
                       "src": "215:8:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Work_$498_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Work_$532_$",
                         "typeString": "function (address) returns (contract Work)"
                       },
                       "typeName": {
@@ -717,13 +717,13 @@
                           "id": 14,
                           "name": "Work",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 498,
+                          "referencedDeclaration": 532,
                           "src": "219:4:0"
                         },
-                        "referencedDeclaration": 498,
+                        "referencedDeclaration": 532,
                         "src": "219:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Work_$498",
+                          "typeIdentifier": "t_contract$_Work_$532",
                           "typeString": "contract Work"
                         }
                       }
@@ -739,7 +739,7 @@
                     "src": "215:20:0",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Work_$498",
+                      "typeIdentifier": "t_contract$_Work_$532",
                       "typeString": "contract Work"
                     }
                   },
@@ -785,7 +785,7 @@
                             "referencedDeclaration": 13,
                             "src": "282:1:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Work_$498",
+                              "typeIdentifier": "t_contract$_Work_$532",
                               "typeString": "contract Work"
                             }
                           }
@@ -793,7 +793,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Work_$498",
+                              "typeIdentifier": "t_contract$_Work_$532",
                               "typeString": "contract Work"
                             }
                           ],
@@ -914,7 +914,7 @@
         32
       ],
       "Work": [
-        498
+        532
       ]
     },
     "id": 33,
@@ -938,7 +938,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 33,
-        "sourceUnit": 499,
+        "sourceUnit": 533,
         "src": "63:20:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -947,7 +947,7 @@
         "abstract": false,
         "baseContracts": [],
         "contractDependencies": [
-          498
+          532
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
@@ -1050,7 +1050,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Work_$498",
+                        "typeIdentifier": "t_contract$_Work_$532",
                         "typeString": "contract Work"
                       },
                       "typeName": {
@@ -1060,13 +1060,13 @@
                           "id": 11,
                           "name": "Work",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 498,
+                          "referencedDeclaration": 532,
                           "src": "206:4:0"
                         },
-                        "referencedDeclaration": 498,
+                        "referencedDeclaration": 532,
                         "src": "206:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Work_$498",
+                          "typeIdentifier": "t_contract$_Work_$532",
                           "typeString": "contract Work"
                         }
                       },
@@ -1118,7 +1118,7 @@
                       "nodeType": "NewExpression",
                       "src": "215:8:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Work_$498_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_Work_$532_$",
                         "typeString": "function (address) returns (contract Work)"
                       },
                       "typeName": {
@@ -1128,13 +1128,13 @@
                           "id": 14,
                           "name": "Work",
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 498,
+                          "referencedDeclaration": 532,
                           "src": "219:4:0"
                         },
-                        "referencedDeclaration": 498,
+                        "referencedDeclaration": 532,
                         "src": "219:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Work_$498",
+                          "typeIdentifier": "t_contract$_Work_$532",
                           "typeString": "contract Work"
                         }
                       }
@@ -1150,7 +1150,7 @@
                     "src": "215:20:0",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Work_$498",
+                      "typeIdentifier": "t_contract$_Work_$532",
                       "typeString": "contract Work"
                     }
                   },
@@ -1196,7 +1196,7 @@
                             "referencedDeclaration": 13,
                             "src": "282:1:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Work_$498",
+                              "typeIdentifier": "t_contract$_Work_$532",
                               "typeString": "contract Work"
                             }
                           }
@@ -1204,7 +1204,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Work_$498",
+                              "typeIdentifier": "t_contract$_Work_$532",
                               "typeString": "contract Work"
                             }
                           ],
@@ -1326,18 +1326,18 @@
     "3": {
       "events": {},
       "links": {},
-      "address": "0x4f6A56EeBb3A2584547eC415281FD3CaE4550480",
-      "transactionHash": "0x1ca564374e0de736cb04753f0fc1294a9e336323dca6ff390e7c7f27dd73acad"
+      "address": "0x009E59C23977B924e5F6A5Af7AC02B79dEEA3F57",
+      "transactionHash": "0x9d7b6e403df17bc4bc204ff19fafc0fb1589b6f43a65fca1a8cae5273db467e1"
     },
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x9c3617cd409000CeB26fC614dd8cA7d6e02FAd39",
-      "transactionHash": "0x3f9cf8064997c63635973ff847988c400792433f9c8abd93971a8b09fbafac26"
+      "address": "0x8223050C7E9d856133153C57605881495C6DB418",
+      "transactionHash": "0x0bf2aa910c215365bface2f7e490b0695c100c607d47e386bbdd528f515330b1"
     }
   },
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-05-08T15:10:37.951Z",
+  "updatedAt": "2021-05-08T20:19:17.185Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

@@ -1,44 +1,43 @@
-
-.Government{
+.Government {
     padding: 0 1rem;
     margin-bottom: 5rem;
 }
-.Government-table{
+.Government-table {
     max-width: 1000px;
     margin: auto;
 }
-.currentFund{
+.currentFund {
     background-color: #00d395;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding: 2rem 0;
 }
-.Government-form{
+.Government-form {
     max-width: 500px;
 }
-.Government-form-wrapper{
+.Government-form-wrapper {
     width: 100%;
     margin: auto;
     color: white;
     border: 1px solid #00d39483;
     border-radius: 15px;
 }
-.Government-form-wrapper h2{
+.Government-form-wrapper h2 {
     color: white;
 }
-.Government-form-wrapper input{
+.Government-form-wrapper input {
     border: 1px solid #00d395;
     border-radius: 5rem;
     padding: 0.7rem;
     width: 80%;
     background-color: transparent;
-    color: white;
+    color: #00d395;
     margin-top: 20px;
 }
-.Government-form-wrapper input:focus{
-    outline:none!important;
+.Government-form-wrapper input:focus {
+    outline: none !important;
 }
-.Government-form-wrapper button{
+.Government-form-wrapper button {
     width: 80%;
     border: 2px solid #00d395;
     background-color: #00d395;
@@ -48,14 +47,14 @@
     margin: 1rem 0;
 }
 
-.Government-form-wrapper button:hover{
+.Government-form-wrapper button:hover {
     background-color: white;
     color: #00d395;
 }
 
-.currentFund h1{
+.currentFund h1 {
     font-size: 4rem;
 }
-.currentFund p{
+.currentFund p {
     color: white;
 }
