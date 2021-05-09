@@ -14,7 +14,9 @@ function WhiteCard({ caption, title, imgUrl }) {
                 />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
-                    <Card.Text>{caption}</Card.Text>
+                    <Card.Text className="card-text-justify">
+                        {caption}
+                    </Card.Text>
                 </Card.Body>
             </Card>{" "}
         </Col>

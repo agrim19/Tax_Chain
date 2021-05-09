@@ -64,6 +64,13 @@ It will help in reducing and avoiding frauds as anyone doing so can be caught ea
 Even the money a state govt entity allots to the contractors for various projects is well tracked. This can help keep track of exactly where they used the money, hence again reducing corruption.
 4. **Relief for citizens**\
 Imagine knowing how the government is using your money? How awesome is that! 
+
+## Instructions to Run
+1. Go to client folder: ```cd client```
+2. Install node modules: ```npm install```
+3. Start Server: ```npm start```
+4. Go to http://localhost:3000
+5. You will be asked to login on Portis Wallet integrated with the website. Create and account on Portis and login.
  
 ## Developers
 <table>

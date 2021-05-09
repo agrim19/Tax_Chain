@@ -8,24 +8,24 @@ function Slider() {
             <Carousel.Item interval={1500}>
                 <Carousel.Caption>
                     <p>
-                        Nulla vitae elit libero,{" "}
-                        <span className="green">a pharetra </span>
-                        augue mollis interdum.
+                        TaxChain Reduces Corruption and Creates
+                        <span className="green"> Transparency </span>
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1500}>
                 <Carousel.Caption>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        TaxChain Is An All In One Website To Pay and
+                        <span className="green"> Track Your Tax</span>
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item interval={1500}>
                 <Carousel.Caption>
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl
-                        consectetur.
+                        A <span className="green">Revolutionary Idea </span>
+                        Which Can End Corruption Forever
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
