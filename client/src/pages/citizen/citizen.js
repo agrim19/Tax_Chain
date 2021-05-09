@@ -10,10 +10,10 @@ import {
     Card,
     Container,
     Alert,
-    Table
+    Table,
 } from 'react-bootstrap';
-import CitizenTable from '../../components/Tables/CitizenTable.js'
-import GovernmentTable from '../../components/Tables/GovernmentTable.js'
+import CitizenTable from '../../components/Tables/CitizenTable.js';
+import GovernmentTable from '../../components/Tables/GovernmentTable.js';
 import CurrentTokens from '../../components/currentTokens/currentTokens.js';
 import PurchaseTokens from '../../components/purchaseTokens/purchaseTokens.js';
 import Transact from '../../contracts/Transact.json';
@@ -30,8 +30,8 @@ export default function Citizen({ web3 }) {
     const [tableDataCitizen, setTableDateCitizen] = useState([]);
     const [tableDataGovernment, setTableDataGovernment] = useState([]);
 
-    getTableDateCitizen()
-    getTableDateGovernment()
+    getTableDateCitizen();
+    getTableDateGovernment();
 
     var description =
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sollicitudin tempor id eu nisl nunc. Malesuada bibendum arcu vitae elementum curabitur vitae. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nisl vel pretium lectus quam id leo in vitae turpis. A lacus vestibulum sed arcu non odio euismod. Tincidunt vitae semper quis lectus nulla. Pulvinar elementum integer enim neque volutpat ac. Tortor at risus viverra adipiscing at. Placerat in egestas erat imperdiet sed. Turpis tincidunt id aliquet risus. Sed enim ut sem viverra. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc.';
@@ -94,36 +94,40 @@ export default function Citizen({ web3 }) {
             .catch(alert);
     };
 
-    async function getTableDateCitizen(){
-        let data = []
-        await db.collection("tax-payments").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                // console.log(doc.id, " => ", doc.data());
-                data.push(doc.data())
+    async function getTableDateCitizen() {
+        let data = [];
+        await db
+            .collection('tax-payments')
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    // doc.data() is never undefined for query doc snapshots
+                    // console.log(doc.id, " => ", doc.data());
+                    data.push(doc.data());
+                });
             });
-        });
 
-        setTableDateCitizen(data)
+        setTableDateCitizen(data);
     }
-    async function getTableDateGovernment(){
-        let data = []
-        await db.collection("allot-funds").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                // console.log(doc.id, " => ", doc.data());
-                data.push(doc.data())
+    async function getTableDateGovernment() {
+        let data = [];
+        await db
+            .collection('allot-funds')
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    // doc.data() is never undefined for query doc snapshots
+                    // console.log(doc.id, " => ", doc.data());
+                    data.push(doc.data());
+                });
             });
-        });
 
-        setTableDataGovernment(data)
+        setTableDataGovernment(data);
     }
-    
 
     return (
         <div className=''>
-
-            <NavigationBar></NavigationBar>
+            <NavigationBar Web3={web3}></NavigationBar>
             <Header heading='Citizen: Rohan Singh'></Header>
             <Container>
                 <Row>
@@ -138,7 +142,9 @@ export default function Citizen({ web3 }) {
                 <Row>
                     <Col sx={12} md={8} id='table'>
                         <div className='payTax-table'>
-                            <CitizenTable tableData={tableDataCitizen}></CitizenTable>
+                            <CitizenTable
+                                tableData={tableDataCitizen}
+                            ></CitizenTable>
                         </div>
                     </Col>
                     <Col sx={12} md={4}>
@@ -178,8 +184,11 @@ export default function Citizen({ web3 }) {
                             </Card>
                         </div>
                     </Col>
-                    <Col className="mt-5">
-                        <GovernmentTable heading={"Track You Tax"} tableData={tableDataGovernment}></GovernmentTable>
+                    <Col className='mt-5'>
+                        <GovernmentTable
+                            heading={'Track You Tax'}
+                            tableData={tableDataGovernment}
+                        ></GovernmentTable>
                     </Col>
                 </Row>
             </div>

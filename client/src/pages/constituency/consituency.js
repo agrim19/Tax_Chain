@@ -77,10 +77,10 @@ function Constituency(web3) {
                 .catch(alert);
         });
     };
-    const tableData = []
+    const tableData = [];
     return (
         <div>
-            <NavigationBar></NavigationBar>
+            <NavigationBar Web3={web3}></NavigationBar>
             <Header heading='Malviya Nagar Constituency'></Header>
             <Container className='my-5'>
                 <Row>
@@ -121,11 +121,11 @@ function Constituency(web3) {
                             </Form>
                         </Card.Body>
                     </Card>
-                    <Transactions 
-                        heading='Previous Funds Transfer' 
-                        tableHeaders={["ContractId", "Amount"]}
+                    <Transactions
+                        heading='Previous Funds Transfer'
+                        tableHeaders={['ContractId', 'Amount']}
                         tableData={tableData}
-                        ></Transactions>
+                    ></Transactions>
                 </div>
             </Container>
 

@@ -4,7 +4,7 @@ import Header from '../../components/header/header.js';
 import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
 import Fund from '../../components/fund/fund.js';
-import CreateTable from '../../components/Tables/GovernmentTable.js'
+import CreateTable from '../../components/Tables/GovernmentTable.js';
 import './government.css';
 import GovtAllocate from '../../contracts/GovtAllocate.json';
 import AddConstituency from '../../components/addConstituency/addConstituency.js';
@@ -19,7 +19,7 @@ export default function Government(web3) {
     const [amount, setAmount] = useState(0);
     const [tableData, setTableDate] = useState([]);
 
-    getTableDate()
+    getTableDate();
 
     useEffect(() => {
         web3.web3.eth.getAccounts().then(async (accounts) => {
@@ -72,22 +72,25 @@ export default function Government(web3) {
             .catch(alert);
     };
 
-    async function getTableDate(){
-        let data = []
-        await db.collection("allot-funds").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                // console.log(doc.id, " => ", doc.data());
-                data.push(doc.data())
+    async function getTableDate() {
+        let data = [];
+        await db
+            .collection('allot-funds')
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    // doc.data() is never undefined for query doc snapshots
+                    // console.log(doc.id, " => ", doc.data());
+                    data.push(doc.data());
+                });
             });
-        });
 
-        setTableDate(data)
+        setTableDate(data);
     }
 
     return (
         <>
-            <NavigationBar></NavigationBar>
+            <NavigationBar Web3={web3}></NavigationBar>
             <Header heading='Government of India'></Header>
             <Container>
                 <div className='Government mb-5'>
@@ -102,9 +105,10 @@ export default function Government(web3) {
                               tableHeaders={["ConstituencyID", "Amount", "Date"]} 
                               tableData={tableData}
                             ></Transactions> */}
-                            <CreateTable heading={"Previous Transfers"} tableData={tableData}></CreateTable>
-
-
+                            <CreateTable
+                                heading={'Previous Transfers'}
+                                tableData={tableData}
+                            ></CreateTable>
                         </Col>
                         <Col sm={12} md={4}>
                             <div className='Government-form'>
@@ -168,6 +172,3 @@ export default function Government(web3) {
         </>
     );
 }
-
-
-
