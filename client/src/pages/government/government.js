@@ -4,7 +4,6 @@ import Header from '../../components/header/header.js';
 import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
 import Fund from '../../components/fund/fund.js';
-import Transactions from '../../components/transactions/transactions.js';
 import CreateTable from '../../components/Tables/GovernmentTable.js'
 import './government.css';
 import GovtAllocate from '../../contracts/GovtAllocate.json';
@@ -103,7 +102,7 @@ export default function Government(web3) {
                               tableHeaders={["ConstituencyID", "Amount", "Date"]} 
                               tableData={tableData}
                             ></Transactions> */}
-                            <CreateTable tableData={tableData}></CreateTable>
+                            <CreateTable heading={"Previous Transfers"} tableData={tableData}></CreateTable>
 
 
                         </Col>

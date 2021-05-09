@@ -18,8 +18,8 @@ function ContractTable(props) {
                     <tr>
                         <th>Title</th>
                         <th>Description</th>
-                        <th>Contract ID</th>
                         <th>date</th>
+                        <th>Contract ID</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,8 +29,8 @@ function ContractTable(props) {
                             <tr key={index}>
                                 <td key={0}>{item.title}</td>
                                 <td key={1}>{item.description}</td>
-                                <td key={2}>{item.work}</td>
                                 <td key={3}>{item.date}</td>
+                                <td key={2}>{item.work}</td>
                             </tr>
                         ))
                     }

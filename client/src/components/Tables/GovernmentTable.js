@@ -5,7 +5,7 @@ function GovernmentTable(props) {
     return (
         <Card className="constituency-card constituency-transaction-card">
             <h4 className="constituency-transaction-heading ">
-                Previous Transfers
+                {props.heading}
             </h4>
             <Table
                 responsive

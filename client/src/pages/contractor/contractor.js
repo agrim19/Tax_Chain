@@ -11,10 +11,6 @@ import {
 import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
 import Header from '../../components/header/header.js';
-import Contract from '../../components/contract/contract.js';
-import Transactions from '../../components/transactions/transactions.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWrench, faFileContract } from '@fortawesome/free-solid-svg-icons';
 import GenerateContract from '../../components/generateContract/generateContract.js';
 import ContractTable from '../../components/Tables/ContractTable.js'
 import { db } from '../../firebase';

@@ -7,6 +7,18 @@ import { useAuth } from '../../pages/contexts/AuthContext';
 
 function NavigationBar(props) {
     const { currentUser, signout } = useAuth();
+    function isGovernment(){
+        return true
+    }
+    function isConstituency(){
+        return true
+    }
+    function isContractor(){
+        return true
+    }
+    function isCitizen(){
+        return true
+    }
     // console.log("from navbar", currentUser);
     return (
         <Navbar className='color-nav fixed-top' variant='dark' expand='lg'>
@@ -17,18 +29,29 @@ function NavigationBar(props) {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='mr-auto ml-auto'>
-                    <Nav.Link className='nav-link' href='/citizen'>
-                        Citizens
-                    </Nav.Link>
-                    <Nav.Link className='nav-link' href='/government'>
-                        Government
-                    </Nav.Link>
-                    <Nav.Link className='nav-link' href='/constituency'>
-                        Constituency
-                    </Nav.Link>
-                    <Nav.Link className='nav-link' href='/contractor'>
-                        Contractor
-                    </Nav.Link>
+                    {isCitizen()?
+                        <Nav.Link className='nav-link' href='/citizen'>
+                            Citizens
+                        </Nav.Link>
+                    :""}
+
+                    {isGovernment?
+                        <Nav.Link className='nav-link' href='/government'>
+                            Government
+                        </Nav.Link>
+                    :""}
+                    
+                    {isConstituency?
+                        <Nav.Link className='nav-link' href='/constituency'>
+                            Constituency
+                        </Nav.Link>
+                    :""}
+                    
+                    {isContractor?
+                        <Nav.Link className='nav-link' href='/contractor'>
+                            Contractor
+                        </Nav.Link>
+                        :""}
                 </Nav>
                 <Nav.Link
                     className='nav-link'
