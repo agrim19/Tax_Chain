@@ -5,6 +5,7 @@ import NavigationBar from '../../components/navbar/navbar.js';
 import Footer from '../../components/footer/footer.js';
 import Fund from '../../components/fund/fund.js';
 import Transactions from '../../components/transactions/transactions.js';
+import CreateTable from '../../components/Tables/GovernmentTable.js'
 import './government.css';
 import GovtAllocate from '../../contracts/GovtAllocate.json';
 import AddConstituency from '../../components/addConstituency/addConstituency.js';
@@ -17,6 +18,10 @@ export default function Government(web3) {
     const [contract, setContract] = useState({});
     const [constId, setConstId] = useState('');
     const [amount, setAmount] = useState(0);
+    const [tableData, setTableDate] = useState([]);
+
+    getTableDate()
+
     useEffect(() => {
         web3.web3.eth.getAccounts().then(async (accounts) => {
             setAccount(accounts[0]);
@@ -67,6 +72,20 @@ export default function Government(web3) {
             })
             .catch(alert);
     };
+
+    async function getTableDate(){
+        let data = []
+        await db.collection("allot-funds").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                // console.log(doc.id, " => ", doc.data());
+                data.push(doc.data())
+            });
+        });
+
+        setTableDate(data)
+    }
+
     return (
         <>
             <NavigationBar></NavigationBar>
@@ -79,7 +98,14 @@ export default function Government(web3) {
                     </Row>
                     <Row>
                         <Col sm={12} md={8}>
-                            <Transactions heading='Transactions'></Transactions>
+                            {/* <Transactions 
+                              heading='Transactions' 
+                              tableHeaders={["ConstituencyID", "Amount", "Date"]} 
+                              tableData={tableData}
+                            ></Transactions> */}
+                            <CreateTable tableData={tableData}></CreateTable>
+
+
                         </Col>
                         <Col sm={12} md={4}>
                             <div className='Government-form'>
@@ -143,3 +169,6 @@ export default function Government(web3) {
         </>
     );
 }
+
+
+

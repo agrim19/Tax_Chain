@@ -77,6 +77,7 @@ function Constituency(web3) {
                 .catch(alert);
         });
     };
+    const tableData = []
     return (
         <div>
             <NavigationBar></NavigationBar>
@@ -87,7 +88,6 @@ function Constituency(web3) {
                     <Fund name='Used Funds' value='3202'></Fund>
                 </Row>
                 <Row>
-                    <Transactions heading='Transactions in Your Constituency'></Transactions>
                     <TransferFunds web3={web3}></TransferFunds>
                     <Kyc web3={web3}></Kyc>
                 </Row>
@@ -121,6 +121,11 @@ function Constituency(web3) {
                             </Form>
                         </Card.Body>
                     </Card>
+                    <Transactions 
+                        heading='Previous Funds Transfer' 
+                        tableHeaders={["ContractId", "Amount"]}
+                        tableData={tableData}
+                        ></Transactions>
                 </div>
             </Container>
 

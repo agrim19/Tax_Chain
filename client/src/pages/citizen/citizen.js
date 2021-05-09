@@ -10,8 +10,10 @@ import {
     Card,
     Container,
     Alert,
+    Table
 } from 'react-bootstrap';
 import Transactions from '../../components/transactions/transactions.js';
+import CitizenTable from '../../components/Tables/CitizenTable.js'
 import CurrentTokens from '../../components/currentTokens/currentTokens.js';
 import PurchaseTokens from '../../components/purchaseTokens/purchaseTokens.js';
 import Transact from '../../contracts/Transact.json';
@@ -25,6 +27,10 @@ export default function Citizen({ web3 }) {
     const [networkId, setNetworkId] = useState('');
     const [transactContract, setTransactContract] = useState('');
     const [mineMessage, setMineMessage] = useState('');
+    const [tableData, setTableDate] = useState([]);
+
+    getTableDate()
+
     var description =
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam sollicitudin tempor id eu nisl nunc. Malesuada bibendum arcu vitae elementum curabitur vitae. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nisl vel pretium lectus quam id leo in vitae turpis. A lacus vestibulum sed arcu non odio euismod. Tincidunt vitae semper quis lectus nulla. Pulvinar elementum integer enim neque volutpat ac. Tortor at risus viverra adipiscing at. Placerat in egestas erat imperdiet sed. Turpis tincidunt id aliquet risus. Sed enim ut sem viverra. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc.';
     useEffect(() => {
@@ -85,8 +91,24 @@ export default function Citizen({ web3 }) {
             })
             .catch(alert);
     };
+
+    async function getTableDate(){
+        let data = []
+        await db.collection("tax-payments").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                // console.log(doc.id, " => ", doc.data());
+                data.push(doc.data())
+            });
+        });
+
+        setTableDate(data)
+    }
+    
+
     return (
         <div className=''>
+
             <NavigationBar></NavigationBar>
             <Header heading='Citizen: Rohan Singh'></Header>
             <Container>
@@ -102,10 +124,9 @@ export default function Citizen({ web3 }) {
                 <Row>
                     <Col sx={12} md={8} id='table'>
                         <div className='payTax-table'>
-                            <Transactions heading='Transactions'></Transactions>
+                            <CitizenTable tableData={tableData}></CitizenTable>
                         </div>
                     </Col>
-
                     <Col sx={12} md={4}>
                         <div>
                             <Card className='table-card'>

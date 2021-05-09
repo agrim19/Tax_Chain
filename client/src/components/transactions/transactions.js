@@ -11,7 +11,7 @@ function Transactions(props) {
                     {props.heading}
                 </h4>
                 <FindByYearMonthForm></FindByYearMonthForm>
-                <TransactionTable data={props.data}></TransactionTable>
+                <TransactionTable tableHeaders={props.tableHeaders} tableData={props.tableData}></TransactionTable>
             </Card>
         </Col>
     );

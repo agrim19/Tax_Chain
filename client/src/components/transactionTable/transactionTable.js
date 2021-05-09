@@ -18,14 +18,27 @@ function TransactionTable(props) {
             >
                 <thead>
                     <tr>
-                        <th>Date</th>
+                        {props.tableHeaders.map((colName) => (
+                            <th key={colName}>{colName}</th>
+                        ))}
+                        {/* <th>Date</th>
                         <th>Contract ID</th>
                         <th>Amount in INR</th>
-                        <th>Title</th>
+                        <th>Title</th> */}
                     </tr>
                 </thead>
                 <tbody>
-                    <TransactionRow
+                    {props.tableData.map((row, index) => (
+                        <TransactionRow 
+                            key={index}
+                            row={row}
+                        ></TransactionRow>
+                    ))}
+                    {/* item1={row[0]?row[0]:""}
+                            item2={row[1]?row[1]:""}
+                            item3={row[2]?row[2]:""}
+                            item4={row[3]?row[3]:""} */}
+                    {/* <TransactionRow
                         date="2021-01-01"
                         contractId="23"
                         amount="21392"
@@ -39,7 +52,7 @@ function TransactionTable(props) {
                         date="2021-01-01"
                         contractId="221"
                         amount="213"
-                    ></TransactionRow>
+                    ></TransactionRow> */}
                 </tbody>
             </Table>
         </>

@@ -37,7 +37,7 @@ function NavigationBar(props) {
                     <Button
                         variant='outline'
                         className='btn-green'
-                        onClick={currentUser ? signout : ''}
+                        onClick={currentUser ? signout : () =>{}}
                     >
                         {currentUser ? 'Logout' : 'Login'}
                     </Button>

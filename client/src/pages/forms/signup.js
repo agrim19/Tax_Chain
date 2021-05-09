@@ -12,7 +12,6 @@ function SignUp() {
     const passwordRef = useRef();
     const nameRef = useRef();
     const blockChainAddressRef = useRef();
-    const designationRef = useRef();
 
     const { signup } = useAuth();
     // console.log(signup)
@@ -61,7 +60,7 @@ function SignUp() {
             <div className='form-container form-container-signup'>
                 <h1>Sign Up</h1>
                 {error ? (
-                    <Alert variant='succes<NavigationBar></NavigationBar>s' className='mb-5'>
+                    <Alert variant='success' className='mb-5'>
                         {error}
                     </Alert>
                 ) : (

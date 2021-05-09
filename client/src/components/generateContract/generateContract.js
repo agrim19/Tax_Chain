@@ -33,7 +33,7 @@ function GenerateContract(web3) {
                                 date: new Date().toLocaleDateString('en-US'),
                                 work: values._work,
                                 title: title,
-                                description: description,
+                                description: description
                             })
                             .then((docRef) => {
                                 console.log(
