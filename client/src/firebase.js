@@ -3,12 +3,12 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyDkH1JHb_iWvZRngl_15-58OKFgTrX1sEs",
-    authDomain: "authdemo-e8357.firebaseapp.com",
-    projectId: "authdemo-e8357",
-    storageBucket: "authdemo-e8357.appspot.com",
-    messagingSenderId: "986574374226",
-    appId: "1:986574374226:web:4e6eb8325b6e065689268b"
+    apiKey: "AIzaSyCmFSdcJgAdNFA6CzHDj_edbYYEjcVZQHI",
+    authDomain: "tax-chain-de99a.firebaseapp.com",
+    projectId: "tax-chain-de99a",
+    storageBucket: "tax-chain-de99a.appspot.com",
+    messagingSenderId: "142206292019",
+    appId: "1:142206292019:web:283e61e77015c7f0fb9346"
 })
 
 export const auth = app.auth()
