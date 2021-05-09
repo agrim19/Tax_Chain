@@ -14,3 +14,7 @@
     border-radius: 2px;
     transition: box-shadow 0.3s ease-in-out;
 }
+
+.card-text-justify {
+    text-align: justify;
+}
